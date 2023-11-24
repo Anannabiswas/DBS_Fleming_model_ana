@@ -1,3 +1,6 @@
+#Acknowledgement
+This repository is the updated version of https://github.com/silvanx/CBG_Model_Fleming repository. I have modified the original code for the onoff controller and dual threshold controller. 
+
 # About
 This repository contains a computational model of the cortico-basal ganglia loop, capable of recording local field
 potentials (LFP) from the subthalamic nucleus (STN), as well as delivering deep brain stimulation (DBS) in the same
