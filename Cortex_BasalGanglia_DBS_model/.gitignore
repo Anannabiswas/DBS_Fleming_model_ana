@@ -1,0 +1,6 @@
+*.o
+*.c
+*.dll
+*.so
+neuron_mechanisms/x86_64
+RESULTS
