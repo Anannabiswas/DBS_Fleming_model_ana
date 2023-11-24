@@ -26,6 +26,16 @@ onoff_schema = dict(
     ts={"type": "float", "coerce": float},
 )
 
+
+dual_schema = dict(
+    lower_threshold={"type": "float", "coerce": float},
+    upper_threshold={"type": "float", "coerce": float},
+    min_value={"type": "float", "coerce": float},
+    max_value={"type": "float", "coerce": float},
+    ramp_duration={"type": "float", "coerce": float},
+    ts={"type": "float", "coerce": float},
+)
+
 ift_schema = dict(
     setpoint={"type": "float", "coerce": float},
     kp={"type": "float", "coerce": float},
@@ -72,6 +82,8 @@ class Config(object):
         SteadyStateDuration={"type": "float", "coerce": float, "default": 6000.0},
         RunTime={"type": "float", "coerce": float, "default": 32000.0},
         setpoint={"type": "float", "coerce": float, "default": 0},
+        lower_threshold={"type": "float", "coerce": float, "default": 0},
+        upper_threshold={"type": "float", "coerce": float, "default": 0.1},
         beta_burst_modulation_scale={"type": "float", "coerce": float, "default": 0.02},
         ctx_dc_offset={"type": "float", "coerce": float, "default": 0},
         kp={"type": "float", "coerce": float, "default": 0.23},
@@ -134,8 +146,10 @@ def get_controller_kwargs(config):
     controller = config.Controller
     if controller == "ZERO":
         schema = zero_schema
-    elif controller == "OnOff":
+    elif controller == "ONOFF":
         schema = onoff_schema
+    elif controller == "DUAL":
+        schema = dual_schema
     elif controller == "PID":
         schema = pid_schema
     elif controller == "IFT":
