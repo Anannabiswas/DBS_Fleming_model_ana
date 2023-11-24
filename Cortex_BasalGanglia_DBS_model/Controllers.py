@@ -465,6 +465,28 @@ class DualThresholdController:
 
         return self.output_value
 
+    def generate_dbs_signal(
+        self,
+        start_time,
+        stop_time,
+        dt,
+        amplitude,
+        frequency,
+        pulse_width,
+        offset,
+        last_pulse_time_prior=0,
+    ):
+        return generate_monophasic_square_dbs_signal(
+            start_time,
+            stop_time,
+            dt,
+            amplitude,
+            frequency,
+            pulse_width,
+            offset,
+            last_pulse_time_prior
+            )
+
     def set_upper_threshold(self, upper_threshold):
         """Sets the upper threshold for the measured state"""
         self.upper_threshold = upper_threshold
