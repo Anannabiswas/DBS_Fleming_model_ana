@@ -274,9 +274,9 @@ if __name__ == "__main__":
     # Controller sampling period, Ts, is in sec
     if controller_type == "ZERO":
         Controller = ZeroController
-    elif controller_type == "OnOff":
+    elif controller_type == "ONOFF":
         Controller = OnOffController
-    elif controller_type == "Dual":
+    elif controller_type == "DUAL":
         Controller = DualThresholdController
     elif controller_type == "PID":
         Controller = StandardPIDController
