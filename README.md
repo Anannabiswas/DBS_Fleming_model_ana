@@ -54,7 +54,7 @@ The config file specifies the parameters of the simulation
 - `ctx_slow_modulation_amplitude`: amplitude of slow cortical modulation
 ## Controller
 - `setpoint`: target value of the biomarker
-- `td`:
+- `td`: derivative time constant
 - `ts`: time between subsequent controller calls; unit: s
 - `min_value`: minimum value of controller output
 - `max_value`: maximum value of controller output
