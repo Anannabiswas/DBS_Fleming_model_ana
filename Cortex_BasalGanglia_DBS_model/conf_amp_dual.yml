@@ -5,7 +5,7 @@ Modulation: amplitude
 RunTime: 32000.0
 
 # Controller
-lower_threshold: 5.207e-05,
+lower_threshold: 5.207e-05
 upper_threshold: 1.0414e-04
 min_value: 0.0
 max_value: 3.0
