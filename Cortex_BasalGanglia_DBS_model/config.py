@@ -69,7 +69,7 @@ class Config(object):
             "type": "string",
             "coerce": (str, lambda x: x.upper()),
             "default": "ZERO",
-            "allowed": ("ZERO", "PID", "IFT", "OPEN", "OnOff"),
+            "allowed": ("ZERO", "PID", "IFT", "OPEN", "ONOFF", "DUAL"),
         },
         Modulation={
             "type": "string",
