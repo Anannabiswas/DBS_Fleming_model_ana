@@ -288,6 +288,28 @@ class OnOffController:
         self.last_output_value = self.output_value
 
         return self.output_value
+        
+    def generate_dbs_signal(
+        self,
+        start_time,
+        stop_time,
+        dt,
+        amplitude,
+        frequency,
+        pulse_width,
+        offset,
+        last_pulse_time_prior=0,
+    ):
+        return generate_monophasic_square_dbs_signal(
+            start_time,
+            stop_time,
+            dt,
+            amplitude,
+            frequency,
+            pulse_width,
+            offset,
+            last_pulse_time_prior
+            )
 
     def set_max_value(self, max_value):
         """Sets the upper bound for the controller output"""
