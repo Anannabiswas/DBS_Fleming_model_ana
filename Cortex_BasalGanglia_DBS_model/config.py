@@ -90,6 +90,7 @@ class Config(object):
         ti={"type": "float", "coerce": float, "default": 0.2},
         td={"type": "float", "coerce": float, "default": 0},
         ts={"type": "float", "coerce": float, "default": 0},
+        ramp_duration={"type": "float", "coerce": float, "default": 0.25},
         min_value={"type": "float", "coerce": float, "default": 0},
         max_value={"type": "float", "coerce": float, "default": 3},
         stage_length={"type": "float", "coerce": float, "default": 0},
